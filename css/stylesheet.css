@@ -10,6 +10,7 @@ body {
 
 #title {
   font-size: 80px;
+  font-weight: 500;
   margin-top: 27px;
   margin-bottom: 6px;
   padding-right: 70px;
@@ -26,4 +27,14 @@ body {
   transform: translate(30%, 200%) rotate(90deg);
   right: 0;
   top: 0;
+}
+
+#awards {
+  margin-top: 14px;
+  font-size: 16px;
+  display: flex;
+}
+
+#award {
+  margin-right: 40px;
 }
