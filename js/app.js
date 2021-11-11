@@ -1,10 +1,13 @@
 const rootElement = document.getElementById('root')
 
-class HelloWorld extends React.Component { 
+class Header extends React.Component { 
     render() { 
         return (
             <div>
-            <h1>Hello, {this.props.name}!</h1>
+            <div id='title'>Aditi Verma</div>
+            <div id='subtitle'>is a communications designer excited by all things 'text & image'.</div>
+            <div id='subtitle'>She enjoys building design systems with multidisciplinary teams.</div>
+            <div id='contact'>CONTACT</div>
             </div>
         )
     } 
@@ -13,7 +16,7 @@ class HelloWorld extends React.Component {
 function App(){
     return(
         <div>
-        <HelloWorld name="World"/>
+        <Header/>
         </div>
     )
 }
