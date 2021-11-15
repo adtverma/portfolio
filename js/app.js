@@ -45,17 +45,20 @@ const rootElement = document.getElementById('root')
 class Header extends React.Component { 
     render() { 
         return (
-            <div>
-            <div id='title'>Aditi Verma</div>
-            <div id='subtitle'>is a communications designer excited by all things 'text & image'.</div>
-            <div id='subtitle'>She enjoys building design systems with multidisciplinary teams.</div>
+            <div id="header">
+            <div class="left">
+                <div id='title'>Aditi Verma</div>
+                <div id='subtitle'>is a communications designer excited by all things 'text & image'.</div>
+                <div id='subtitle'>She enjoys building design systems with multidisciplinary teams.</div>
 
-            <div id='awards'>
-                <div id='award'>AIGA NY Grad 2019</div>
-                <div id='award'>GDUSA American Graphic Design Award 2019</div>
+                <div id='awards'>
+                    <div id='award'>AIGA NY Grad 2019</div>
+                    <div id='award'>GDUSA American Graphic Design Award 2019</div>
+                </div>
             </div>
-
-            <div id='contact'>CONTACT</div>
+            <div class="right">
+                <div id='contact'>CONTACT</div>
+            </div>
             </div>
         )
     } 
@@ -74,9 +77,15 @@ class Filters extends React.Component {
 class Project extends React.Component {
     render() {
         return (
-            <div class="project">
-                <img src={this.props.project.thumbnail} width="588"/>
-                {this.props.project.name}, {this.props.project.descriptor}
+            <div class="projectRow">
+                <div class="projectLeft">
+                    <img src={this.props.projectLeft.thumbnail} width="588"/>
+                    {this.props.projectLeft.name}, {this.props.projectLeft.descriptor}
+                </div>
+                <div class="projectRight">
+                    <img src={this.props.projectRight.thumbnail} width="588"/>
+                    {this.props.projectRight.name}, {this.props.projectRight.descriptor}
+                </div>
             </div>
         )
     }
@@ -90,7 +99,7 @@ class Projects extends React.Component {
                 <hr/>
                 <div id='projects'>
                     {projects.map((project)=>{
-                        return <Project project={project}/>
+                        return <Project projectLeft={project} projectRight={project}/>
                     })}
                 </div>
             </div>

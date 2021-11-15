@@ -14,6 +14,11 @@ hr {
   height: 2px;
 }
 
+#header {
+  display: flex;
+  justify-content: space-between;
+}
+
 #title {
   font-size: 80px;
   font-weight: 500;
@@ -29,17 +34,14 @@ hr {
 
 #contact {
   font-size: 54px;
-  position: fixed;
-  transform: translate(30%, 200%) rotate(90deg);
-  right: 0;
-  top: 0;
+  transform: translate(40%, 200%) rotate(90deg);
 }
 
 #awards {
   margin-top: 14px;
   font-size: 16px;
   display: flex;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 #award {
@@ -48,9 +50,25 @@ hr {
 
 #projects {
   display: flex;
+  font-size: 27px;
 }
 
 .project {
-  font-size: 27px;
   padding-right: 20px;
+}
+
+.projectLeft {
+  float: left;
+}
+
+.projectRight {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
