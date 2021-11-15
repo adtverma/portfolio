@@ -1,3 +1,45 @@
+const projects = [
+    {
+        "name": "LILT",
+        "descriptor": "Branding & Identity",
+        "filters": ["visual", "client"],
+        "thumbnail": "img/cover/LILT.jpg",
+        "banner": "img/cover/LILT.jpg",
+        "halfLeft0": "img/cover/LILT.jpg",
+        "halfRight0": "img/cover/LILT.jpg",
+        "full0": "img/cover/LILT.jpg",
+        "halfLeft1": "img/cover/LILT.jpg",
+        "halfRight1": "img/cover/LILT.jpg",
+        "bio": "Hello! My name is Aditi and I like to party."
+    },
+    {
+        "name": "LILT",
+        "descriptor": "Branding & Identity",
+        "filters": ["visual", "client"],
+        "thumbnail": "img/cover/LILT.jpg",
+        "banner": "img/cover/LILT.jpg",
+        "halfLeft0": "img/cover/LILT.jpg",
+        "halfRight0": "img/cover/LILT.jpg",
+        "full0": "img/cover/LILT.jpg",
+        "halfLeft1": "img/cover/LILT.jpg",
+        "halfRight1": "img/cover/LILT.jpg",
+        "bio": "Hello! My name is Aditi and I like to party."
+    },
+    {
+        "name": "LILT",
+        "descriptor": "Branding & Identity",
+        "filters": ["visual", "client"],
+        "thumbnail": "img/cover/LILT.jpg",
+        "banner": "img/cover/LILT.jpg",
+        "halfLeft0": "img/cover/LILT.jpg",
+        "halfRight0": "img/cover/LILT.jpg",
+        "full0": "img/cover/LILT.jpg",
+        "halfLeft1": "img/cover/LILT.jpg",
+        "halfRight1": "img/cover/LILT.jpg",
+        "bio": "Hello! My name is Aditi and I like to party."
+    },
+]
+
 const rootElement = document.getElementById('root')
 
 class Header extends React.Component { 
@@ -29,12 +71,15 @@ class Filters extends React.Component {
     } 
 }
 
-class Divider extends React.Component { 
-    render() { 
+class Project extends React.Component {
+    render() {
         return (
-            <hr>
+            <div class="project">
+                <img src={this.props.project.thumbnail} width="588"/>
+                {this.props.project.name}, {this.props.project.descriptor}
+            </div>
         )
-    } 
+    }
 }
 
 class Projects extends React.Component { 
@@ -42,8 +87,12 @@ class Projects extends React.Component {
         return (
             <div>
                 {/*<Filters/>*/}
-                <Divider/>
-                Hello World
+                <hr/>
+                <div id='projects'>
+                    {projects.map((project)=>{
+                        return <Project project={project}/>
+                    })}
+                </div>
             </div>
         )
     } 

@@ -4,8 +4,14 @@ body {
   font-weight: 400;
   color: #ff0e95;
   overflow-x: hidden;
-  overflow-y: hidden;
   margin-left: 35px;
+  margin-right: 35px;
+}
+
+hr {
+  background-color: #ff0e95;
+  border-width: 0;
+  height: 2px;
 }
 
 #title {
@@ -33,8 +39,18 @@ body {
   margin-top: 14px;
   font-size: 16px;
   display: flex;
+  margin-bottom: 100px;
 }
 
 #award {
   margin-right: 40px;
+}
+
+#projects {
+  display: flex;
+}
+
+.project {
+  font-size: 27px;
+  padding-right: 20px;
 }
