@@ -19,10 +19,41 @@ class Header extends React.Component {
     } 
 }
 
+class Filters extends React.Component { 
+    render() { 
+        return (
+            <div>
+                Hello World
+            </div>
+        )
+    } 
+}
+
+class Divider extends React.Component { 
+    render() { 
+        return (
+            <hr>
+        )
+    } 
+}
+
+class Projects extends React.Component { 
+    render() { 
+        return (
+            <div>
+                {/*<Filters/>*/}
+                <Divider/>
+                Hello World
+            </div>
+        )
+    } 
+}
+
 function App(){
     return(
         <div>
         <Header/>
+        <Projects/>
         </div>
     )
 }
