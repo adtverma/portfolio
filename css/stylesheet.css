@@ -49,8 +49,12 @@ hr {
 }
 
 #projects {
-  display: flex;
   font-size: 27px;
+}
+
+.projectRow {
+  display: flex;
+  justify-content: space-between;
 }
 
 .project {
